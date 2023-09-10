@@ -1,0 +1,109 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+
+    string name,sub,dept;
+    int sem;
+    double cgpa;
+
+    ofstream file;
+    file.open("student_details.txt",ios::out|ios::app);
+    int n;
+    cout<<"Press 1 to input Teacher's details"<<endl;
+    cout<<"Press 2 to input student's details"<<endl;
+    cin>>n;
+    if(n==1)
+    {
+        system("CLS");
+        cout<<"Welcome to teacher's details"<<endl<<endl;
+         cout<<"||-------------------Teacher's Details------------------||"<<endl<<endl;
+
+
+for(int i=1;i<=2;i++)
+{
+
+
+
+    cout<<"Enter teacher's name: "<<endl;
+
+    getline(cin,name);
+    file<<name<< "\t";
+
+    cout<<"Subject: "<<endl;
+    getline(cin,sub);
+
+    file<<sub<< "\t";
+    cin.ignore();
+}
+
+
+
+
+    file.close();
+
+
+
+    }
+    else if(n==2)
+    {
+        system("CLS");
+        cout<<"Welcome to Student's details"<<endl<<endl;
+        cout<<"||-------------------Student's Details------------------||"<<endl<<endl;
+
+
+for(int i=1;i<=2;i++)
+{
+
+
+
+    cout<<"Enter Student's name: "<<endl;
+
+    getline(cin,name);
+    file<<name<< "\t";
+
+    cout<<"Department: "<<endl;
+    getline(cin,dept);
+
+    file<<dept<< "\t";
+    cout<<"Semester: "<<endl;
+    cin>>sem;
+    file<<sem<<endl;
+    cout<<"Enter cgpa: "<<endl;
+    cin>>cgpa;
+    file<<cgpa<<endl;
+    cin.ignore();
+}
+
+
+
+
+    file.close();
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    else
+    {
+        system("CLS");
+        cout<<"Invalid"<<endl;
+        exit(0);
+
+    }
+
+
+
+
+}
